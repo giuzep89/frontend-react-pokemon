@@ -1,1 +1,11 @@
-/*Schrijf hier jouw eigen CSS!*/
+/*TODO Add CSS reset and global variables*/
+
+ body {
+     background-color: rgb(241 187 1);
+ }
+
+.inner-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 16px 72px;
+}
