@@ -5,9 +5,9 @@ export default function PokemonCard({name, picture, moves, weight, abilities}) {
     <article className="pokemon-card">
         <h2>{name}</h2>
         <img src={picture} alt=""/>
-        <p>Moves: {moves.length}</p>
-        <p>Weight: {weight}</p>
-        <p>Abilities:</p>
+        <p><strong>Moves:</strong> {moves.length}</p>
+        <p><strong>Weight:</strong> {weight}</p>
+        <p><strong>Abilities:</strong></p>
         {abilities.map((ability) => {
             return (
                 <p key={ability.ability.name}>{ability.ability.name}</p>
