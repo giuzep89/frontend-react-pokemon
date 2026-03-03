@@ -7,7 +7,7 @@ import pokemonLogo from "./assets/612ce4761b9679000402af1c.png";
 function App() {
     const [error, toggleError] = useState(false);
     const [loading, setLoading] = useState(false);
-    const [currentUrl, setCurrentUrl] = useState('https://pokeapi.co/api/v2/pokemon/?limit20&offset=0');
+    const [currentUrl, setCurrentUrl] = useState('https://pokeapi.co/api/v2/pokemon/?limit=20&offset=0');
     const [listOfPokemonUrls, setlistOfPokemonUrls] = useState({});
     const {next, previous, results: listOfUrls = []} = listOfPokemonUrls;
     const [listOfPokemonData, setlistOfPokemonData] = useState([]);
@@ -20,7 +20,6 @@ function App() {
         async function loadListOfPokemon() {
             try {
                 const response = await axios.get(currentUrl, {signal: controller.signal});
-                console.log(response);
                 setlistOfPokemonUrls(response.data);
             } catch (e) {
                 console.error(e);
@@ -50,7 +49,6 @@ function App() {
                 const allData = responses.map((response) => {
                     return response.data;
                 })
-                // console.log(allData[0]);
                 setlistOfPokemonData(allData);
             } catch (e) {
                 console.error(e);
