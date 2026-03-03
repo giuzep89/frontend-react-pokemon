@@ -1,5 +1,7 @@
 # PokemonFetcher
 
+![Demo](src/assets/screenshot.gif)
+
 A React application that fetches and displays Pokemon data from the PokeAPI in a paginated card layout.
 
 ## Tech Stack
